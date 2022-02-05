@@ -2,5 +2,5 @@
 
 ##  A simple bmi calculator app designed in Flutter
 
-## ScreenShots
-![1](https://user-images.githubusercontent.com/79744131/152651597-f59b61ee-1dda-4dc1-91c0-a490e4796e85.JPG)
+## ScreenShots 
+![2](https://user-images.githubusercontent.com/79744131/152651691-2bc63252-d784-46fa-8638-e6c8f3ec5e66.JPG)
