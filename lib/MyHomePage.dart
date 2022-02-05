@@ -19,6 +19,7 @@ class _MyHomePageState extends State<MyHomePage> {
   int selectedGender = 0;
   int weight = 45;
   int height = 160;
+  String healthMeasure = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -102,12 +103,22 @@ class _MyHomePageState extends State<MyHomePage> {
           GestureDetector(
             onTap: () {
               double bmi = weight / pow(height / 100, 2);
+
+              if (bmi < 18.5) {
+                healthMeasure = "underweight";
+              } else if (bmi > 18.5 && bmi < 24.9) {
+                healthMeasure = "normal";
+              } else
+                healthMeasure = "overweight";
+
               showDialog(
                   context: context,
                   builder: (BuildContext context) {
                     return AlertDialog(
                       title: Text(
-                        'Underweight !! \n  Your BMI is ' +
+                        'You are ' +
+                            healthMeasure +
+                            " \n  Your BMI is " +
                             bmi.toStringAsFixed(2),
                         style: TextStyle(
                           fontSize: 25,
